@@ -28,6 +28,18 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_HTTPS_PORTS": "8081",
+        "ASPNETCORE_HTTP_PORTS": "8080",
+        "DB_CONNECTION_STRING":"Host=192.168.1.14;Port=5432;Database=postgres;Username=postgres;Password=postgres"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
     }
   },
   "$schema": "http://json.schemastore.org/launchsettings.json",
